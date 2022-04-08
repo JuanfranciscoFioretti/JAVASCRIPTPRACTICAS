@@ -1,5 +1,4 @@
 
-//ESTO ES EL BRANCH DE LOS ENTREGABLES 
 
 //PARA COMENTAR EN JAVASCRIPT ctrl + k + c
 //USAR LET y CONST, ya no se usa var
