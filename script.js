@@ -207,39 +207,39 @@
 
 ////////////////////...............................
 //CALCULADORA
-let numero1 = (parseInt(promt("Ingresar primer numero")));
-let numero2 = (parseInt(prompt("Ingresar segundo numero")));
-let operacion = prompt("ingrese la operacion");
-let resultadoSuma = calculadora(numero1, numero2, "+");
-let resultadoResta = calculadora(numero1, numero2, "-");
-let resultadoMultip = calculadora(numero1, numero2, "*");
-let resultadoDivi = calculadora(numero1, numero2, "/");
+// let numero1 = (parseInt(promt("Ingresar primer numero")));
+// let numero2 = (parseInt(prompt("Ingresar segundo numero")));
+// let operacion = prompt("ingrese la operacion");
+// let resultadoSuma = calculadora(numero1, numero2, "+");
+// let resultadoResta = calculadora(numero1, numero2, "-");
+// let resultadoMultip = calculadora(numero1, numero2, "*");
+// let resultadoDivi = calculadora(numero1, numero2, "/");
 
-function calculadora (primerNum, segundoNum, operacion) {
-    switch (operacion) {
-        case "+":
-            return primerNum + segundoNum;
-            break;
-        case "-":
-            return primerNum - segundoNum;
-            break;
-        case "*":
-            return primerNum * segundoNum;
-            break;
-         case "/":
-            return primerNum / segundoNum;
-            break;
-        default:
-            return 0;
-            break;
-    }   
-}
+// function calculadora (primerNum, segundoNum, operacion) {
+//     switch (operacion) {
+//         case "+":
+//             return primerNum + segundoNum;
+//             break;
+//         case "-":
+//             return primerNum - segundoNum;
+//             break;
+//         case "*":
+//             return primerNum * segundoNum;
+//             break;
+//          case "/":
+//             return primerNum / segundoNum;
+//             break;
+//         default:
+//             return 0;
+//             break;
+//     }   
+// }
 
 
-alert(resultadoSuma);
-alert(resultadoResta);
-alert(resultadoMultip);
-alert(resultadoDivi);
+// alert(resultadoSuma);
+// alert(resultadoResta);
+// alert(resultadoMultip);
+// alert(resultadoDivi);
 
 
 
