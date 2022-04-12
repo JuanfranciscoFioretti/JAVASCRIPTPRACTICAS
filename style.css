@@ -1,0 +1,12 @@
+body {
+    
+    background-image: url(https://img.freepik.com/psd-gratis/maqueta-diseno-huevo-pascua-silueta-conejito_23-2149355662.jpg?t=st=1649804480~exp=1649805080~hmac=28c6f715318877e0230b7ca19f39f54af86b0b56ef46d9ad6f61496e0b7ad939&w=740);
+}
+.conten {
+    width: 28em;
+    margin-top: 8em;
+    margin-left: 25em;
+    background-color: rgba(182, 178, 178, 0.752);
+    padding: 2em;
+    border-radius: 2em;
+}
