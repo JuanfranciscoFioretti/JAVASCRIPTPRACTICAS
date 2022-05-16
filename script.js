@@ -2611,97 +2611,97 @@
 // ..................................
 
 
-let platos = [
-      {
-            nombre: "Sushi",
-            precio: 500
-      },
-      {
-            nombre: "Pasta con salmón",
-            precio: 300
-      },
-      {
-            nombre: "Carne braseada",
-            precio: 100
-      },
-      {
-            nombre: "Poll con champignones",
-            precio: 200
-      }
-];
+// let platos = [
+//       {
+//             nombre: "Sushi",
+//             precio: 500
+//       },
+//       {
+//             nombre: "Pasta con salmón",
+//             precio: 300
+//       },
+//       {
+//             nombre: "Carne braseada",
+//             precio: 100
+//       },
+//       {
+//             nombre: "Poll con champignones",
+//             precio: 200
+//       }
+// ];
 
 
-function actualizarInputCantidadDePlatos () {
+// function actualizarInputCantidadDePlatos () {
 
-      let platos = localStorage.getItem("platos");
+//       let platos = localStorage.getItem("platos");
 
-      let arrayPlatos = [];
+//       let arrayPlatos = [];
 
-      if (platos !== null) {
-           // OBTENGO EL ARRAY POR MEDIO DE UN SPLIT PARA TRANSFORMAR EL STRING A UN ARRAY
-           arrayPlatos = platos.split(","); 
-      }
+//       if (platos !== null) {
+//            // OBTENGO EL ARRAY POR MEDIO DE UN SPLIT PARA TRANSFORMAR EL STRING A UN ARRAY
+//            arrayPlatos = platos.split(","); 
+//       }
 
-      inputCantidadDePlatos.value = arrayPlatos.length;
-}
+//       inputCantidadDePlatos.value = arrayPlatos.length;
+// }
 
-function agregarALocalStorage (plato) {
+// function agregarALocalStorage (plato) {
 
-      // SE OBTIENE EL ARRAY ACTUAL
-      let platos = localStorage.getItem("platos");
+//       // SE OBTIENE EL ARRAY ACTUAL
+//       let platos = localStorage.getItem("platos");
 
-      let arrayPlatos = [];
+//       let arrayPlatos = [];
 
-      if (platos === null) {
-            // localStorage.setItem("platos", []);
-            // platos = localStorage.getItem("platos");
-      } else {
-            // OBTENGO EL ARRAY POR MEDIO DE UN SPLIT PARA TRANSFORMAR EL STRING A UN ARRAY
-            arrayPlatos = platos.split(",");
-      };
+//       if (platos === null) {
+//             // localStorage.setItem("platos", []);
+//             // platos = localStorage.getItem("platos");
+//       } else {
+//             // OBTENGO EL ARRAY POR MEDIO DE UN SPLIT PARA TRANSFORMAR EL STRING A UN ARRAY
+//             arrayPlatos = platos.split(",");
+//       };
 
-      // AGREGO AL ARRAY EL NOMBRE DEL PRODUCTO
-      arrayPlatos.push(plato.nombre);
+//       // AGREGO AL ARRAY EL NOMBRE DEL PRODUCTO
+//       arrayPlatos.push(plato.nombre);
 
-      localStorage.setItem("platos", arrayPlatos);
+//       localStorage.setItem("platos", arrayPlatos);
 
-      // console.log(arrayPlatos);
+//       // console.log(arrayPlatos);
 
-      actualizarInputCantidadDePlatos();
-};
-
-
-let contenedor = document.getElementById("contenedor");
-
-const inputCantidadDePlatos = document.getElementById("cantidadDePlatos");
-
-platos.forEach ((plato) => {
-
-      const ul = document.createElement("ul");
-
-      const li1 = document.createElement("li");
-      li1.innerText = plato.nombre;
-
-      const li2 = document.createElement("li");
-      li2.innerText = plato.precio;
-
-      const button = document.createElement("button");
-      button.addEventListener ("click", () => {
-
-            agregarALocalStorage(plato);
-      });
-
-      button.innerText = "Agregar al carrito";
-
-      ul.append(li1, li2, button);
-
-      contenedor.append(ul);
-});
+//       actualizarInputCantidadDePlatos();
+// };
 
 
-// INICIALIZAR INPUT
+// let contenedor = document.getElementById("contenedor");
 
-actualizarInputCantidadDePlatos();
+// const inputCantidadDePlatos = document.getElementById("cantidadDePlatos");
+
+// platos.forEach ((plato) => {
+
+//       const ul = document.createElement("ul");
+
+//       const li1 = document.createElement("li");
+//       li1.innerText = plato.nombre;
+
+//       const li2 = document.createElement("li");
+//       li2.innerText = plato.precio;
+
+//       const button = document.createElement("button");
+//       button.addEventListener ("click", () => {
+
+//             agregarALocalStorage(plato);
+//       });
+
+//       button.innerText = "Agregar al carrito";
+
+//       ul.append(li1, li2, button);
+
+//       contenedor.append(ul);
+// });
+
+
+// // INICIALIZAR INPUT
+
+// actualizarInputCantidadDePlatos();
 
 
 /////////////////////////////////////////////////
@@ -2719,34 +2719,179 @@ actualizarInputCantidadDePlatos();
 
 // .................
 
-// ..................... STRINGIFY PASA DE STRING A OBJETO A JSON
+// ..................... STRINGIFY RECIBE UN OBJETO COMO PARÁMETRO Y LO PASA A JSON
 
 // .................
 
+// .................
+
+// ..................... PARSE RECIBE UN OBJETO JSON COMO PARÁMETRO Y DEVUELVE EL OBJETO JS
+
+// .................
+
+// localStorage.clear();
+
+// const objeto = {
+
+//       nombre: "Bernardo",
+//       edad: 30,
+// };
+// // // IMPRIME EL OBJETO
+// // console.log(objeto);
+
+// // // IMPRIME EL OBJETO JSON
+// // console.log(JSON.stringify(objeto));
+
+// const jsonString = '{"nombre":"Bernardo","edad" : 30}';
+
+// // // PASA EL JSON A OBJETO
+// // console.log(JSON.parse(jsonString));
+
+// const objetoParseado = JSON.parse(jsonString);
+
+// console.log(objetoParseado);
+
+// // PERMITE TRABAJARLO COMO UN OBJETO
+// console.log(objetoParseado.nombre);
+
+//////////////////////////////////////////////////////////////
+
+// const productos = [
+//       {
+//             id: "p1",
+//             producto: "Arroz", 
+//             precio: 250
+//       },
+//       {
+//             id: "p2",
+//             producto: "Fideos", 
+//             precio: 200
+//       },
+//       {
+//             id: "p3",
+//             producto: "Carne", 
+//             precio: 560
+//       },
+//       {
+//             id: "p4",
+//             producto: "Chocolate", 
+//             precio: 330
+//       }
+      
+// ];
+
+// const guardarLocal = (clave, valor) => {
+//       localStorage.setItem(clave, valor)
+// };
+
+// // ALMACENAR PRODUCTO X PRODUCTO
+// for (const producto of productos) {
+//       guardarLocal(producto.id, JSON.stringify(producto));
+// };
+
+// // O ALMACENAR ARRAY COMPLETO 
+// guardarLocal("ListaProductos", JSON.stringify(productos));
+
+/////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////..... ALMACENAR ARRAY DE OBJETOS (PRODUCTO)
+
+///////////////////////////////////////..... ARRAY DE PRODUCTOS QUE AGREGAMOS AL DOM EN UNA LISTA 
+///////////////////////////////////////..... CON UN BOTÓN PARA AGREGAR LOS PRODUCTOS AL LOCAL STORAGE 
+///////////////////////////////////////..... Y LE AGREGA LA CANTIDAD DE VECES QUE SE AGREGÓ CADA PRODUCTO
 
 
+// const productos = [
+//       {
+//             producto: "Arroz", 
+//             precio: 250
+//       },
+//       {
+//             producto: "Fideos", 
+//             precio: 200
+//       },
+//       {
+//             producto: "Carne", 
+//             precio: 560
+//       },
+//       {
+//             producto: "Chocolate", 
+//             precio: 330
+//       }
+      
+// ];
+
+// localStorage.clear();
+
+// console.log(JSON.stringify(productos));
+
+// function agregarALocalStorage(producto) {
+
+//       // OBTENEMOS PRODUCTOS DEL LOCALSTORAGE
+//       const productos = localStorage.getItem("productos");
+
+//       let arrayProductos = [];
+
+//       if (productos !== null) {
+//             arrayProductos = JSON.parse(productos);
+//       }
+
+//       // MODIFICO EL PRODUCTO
+//       let productoEncontrado = arrayProductos.find ((productoEnJSON) => {
+//             return productoEnJSON.nombre == producto.nombre
+//       });
+
+//       if (productoEncontrado) {
+//             productoEncontrado.cantidad++;
+//       } else {
+//             producto.cantidad = 1;
+//             productoEncontrado = producto;
+//       }
+
+//       //AGREGAMOS NUEVO PRODUCTO AL LOCAL STORAGE
+//       arrayProductos.push(productoEncontrado);
+
+//       // SETEAR EL LOCAL STORAGE
+//       localStorage.setItem("productos", JSON.stringify(arrayProductos));
+// };
 
 
+// const contenedor = document.getElementById("contenedor");
+
+// const inputCantidadDeProductos = document.getElementById("cantidadDeProductos");
 
 
+// // AGREGAMOS AL DOM
+// productos.forEach ((producto) => {
+
+//       // CREAMOS ELEMENTO LISTA
+//       const ul = document.createElement("ul");
+
+//       const li1 = document.createElement("li");
+//       li1.innerText = producto.nombre;
+
+//       const li2 = document.createElement("li");
+//       li2.innerText = producto.precio;
+
+//       const button = document.createElement("button");
+//       button.addEventListener("click", () => {
+
+//             agregarALocalStorage(producto);
+//       });
+//       button.innerText = "Agregar al carrito";
+
+//       ul.append(li1, li2, button);
+
+//       contenedor.append(ul);
+// });
 
 
+///////////////////////////////////////////////////////////////////////////////////////
+
+// JSON NO PERMITE PASAR MÉTODOS DE OBJETOS (RETORNA LA FUNCIÓN MISMA)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////////////////////////////////
 
 
 
