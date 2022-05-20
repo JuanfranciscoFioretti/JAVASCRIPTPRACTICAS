@@ -46,7 +46,7 @@
 //     if ((edad >= 18) && (edad != "")){
 //         alert ("Error: Ingresar nombre y edad");
 //     }
-    
+
 // }
 
 ////////////////////...............................
@@ -133,6 +133,18 @@
 //     let resultado = ingresarNumero * i ;
 //     alert (ingresarNumero +" X "+ i +" = "+ resultado);2
 // }
+
+////////////////////...............................
+
+let ingresarNumero = parseInt(prompt("Ingresa un numero o si quieres salir ingresa esc"));
+
+do {
+
+      for (let i = 1; i< 10; i++) {
+            let resultado = ingresarNumero * i ;
+            alert (ingresarNumero +" X "+ i +" = "+ resultado);
+      } 
+} while (ingresarNumero != ("esc" && 0) && (i <= 10));
 
 ////////////////////...............................
 
@@ -1276,7 +1288,7 @@
 // const nombreAlumnos = alumnos.map ((elemento) => {
 
 //    elemento.nombreYApellido = elemento.nombre + " " + elemento.apellido;
-   
+
 //    return elemento;
 // })
 
@@ -1313,7 +1325,7 @@
 // // [ 'Javascript', 'ReactJS', 'AngularJS', 'Desarrollo Web' ]
 
 // const actualizado = cursos.map ((elemento) => {
-   
+
 //    elemento = elemento.precio *= 1.25;
 
 //    return elemento;
@@ -1644,7 +1656,7 @@
 
 // PARA ACCEDER AL BODY
 // console.log(document.body);
- 
+
 /////////////////////////////////////////
 
 // ...............................TIPOS DE NODOS 
@@ -2894,22 +2906,691 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
+// .........................................................OPERADORES Y CONDICIONALES AVANZADOS 
 
 
+// // SIMPLIFICACIÓN DE CIERTAS OPERACIONES
+
+// // PERMITEN HACER EL CÓDIGO MÁS SIMPLE Y LEGIBLE
+
+// // EJ 
+
+// let a = 3;
+
+// // FUNCIÓN ORIGINAL
+// a = a + 1;
+
+// // PRIMER REDUCCIÓN
+// a += 1;
+
+// // SEGUNDA REDUCCIÓN
+// a++;
 
 
+//////////////////////////////////////////////////////////////////////////////////////
+
+// // ............................. OPERADORES TERNARIOS 
+
+// // REEMPLAZA AL IF...ELSE  ?  :
 
 
+// // ....... SINTAXIS 
+
+// //  CONDICION            .. Q PASA SI ..  
+// // Q SE CUMPLE        ES TRUE       ES FALSE
+//     condicion    ?     caso1     :     caso2
 
 
+// // .......SOLO SE PUEDE USAR PARA UN IF ELSE
+
+//// ............
+
+// EJ
+
+// let a = 3;
+
+// // IF CLÁSICO
+// if (a==3) {
+//       console.log("A es igual a 3");
+// } else {
+//       console.log("A es distinta de 3");
+// };
 
 
+// OPERADOR TERNARIO
+// a==3 ? console.log("A es igual a 3") : console.log("A es distinta de 3");
+
+// // .........SOLO ACEPTA UNA SENTENCIA.........
+
+// // CADA CASO TIENE UN RETURN IMPLÍCITO
+
+// // ......
+
+// let a = 4;
+
+// // // ASIGNACIÓN NORMAL
+
+// // if (a == 3) {
+// //       a = 4;
+// // } else {
+// //       a = 5;
+// // }
+
+// // console.log(a)
+
+// // ASIGNACIÓN TERNARIA
+
+// a==3 ? a=4 : a=5;
+
+// console.log(a);
 
 
+// // CUANDO UN OPERADOR TERNARIO ESTÁ DESPUÉS DE UNA ASIGNACIÓN 
+
+// // LOS DOS CASOS QUE SE CUMPLEN SI ES TRUE O FALSE TIENEN UN RETURN ÍMPLICITO
+
+// // ESTE RETURN ASIGNA EL CASO TRUE/ FALSE A LA VARIABLE A LA QUE SE ASIGNE EL TERNARIO
+
+// // ASIGNACIÓN TERNARIA
+
+// let a = 4;
+
+// a = (a == 3) ? 4 : 5;
+
+// console.log(a);
+
+/////////////////////////////////////////////////////////////////
+
+// const usuario = {
+//       nombre: "Ricardo Darin",
+//       edad: 43
+// };
+
+// // DECLARAMOS Y ASIGNAMOS CONDICIONALMENTE
+// const permiso = (usuario.edad >= 18) ? true : false;
+
+// //MOSTRAMOS EL MENSAJE
+// permiso ? alert("Puede comprar escabio") : alert("No puede comprar escabio");
 
 
+// // ..................................................
+
+// // ............................... OPERADOR LÓGICO &&
+
+// // SE UTILIZA PARA LOS IF DE UNA SOLA SENTENCIA
+
+// // NO FUNCIONA CON LOS IF... ELSE
+
+// const carrito = [];
+
+// // OPERACIÓN NORMAL
+// if (carrito.length === 0) {
+//       console.log("El carrito está vacío");
+
+// };
+
+// // OPERACIÓN AND
+// carrito.length === 0 && console.log("El changuito esta vacío");
+
+// ................................
+
+// let a = 3;
+
+// // AL ESTAR LA CONDICIÓN DESPUÉS DE UNA ASIGNACIÓN 
+// // PONE UN RETURN IMPLÍCITO EN EL CASO
+// // SI A ES IGUAL A 3, A = 5 (ASIGNA 5 A LA VARIABLE A)
+// a = (a === 3) && 5;
+
+// console.log(a);
+
+// ................................
+
+// SI LA CONDICIÓN RESULTA FALSA  EL OPERADOR  AND  RETORNARÁ  FALSE 
+
+// const usuario = {
+//       nombre: "Ricardo Darin",
+//       edad: 17
+// };
+
+// // DECLARAMOS Y ASIGNAMOS CONDICIONALMENTE
+// const registroIngreso = usuario.edad >= 18 && new Date();
+
+// console.log(registroIngreso); //RETORNARÁ FALSE
 
 
+// ................................
+
+// ........................ OPERADOR LÓGICO OR  ||
+
+// SINTAXIS DEL OR 
+
+// operando1 || operando2
+
+// SI OPERANDO1 ES  !=  ( 0 , null , undefined , NaN , false o string vacío) 
+// EL OPERADOR OR RETORNARÁ OPERANDO1
+
+// DE LO CONTRARIO RETORNARÁ EL OPERANDO2
+
+// let a = 0;
+
+// // RETORNARÁ EL STRING
+// console.log(a || "El valor de a es 0");
+
+// let b = 1;
+
+// // RETORNARÁ EL VALOR DE B
+// console.log(b || "El valor de b es 0");
+
+// ................................
+
+// const usuario1 = {
+//       nombre: "Pedro",
+//       edad: 14
+// };
+
+// const usuario2 = null;
+
+// console.log( usuario1 || "El usuario no existe");
+// // RETORNARÁ EL usuario1
+
+// console.log( usuario2 || "El usuario no existe");
+// // RETORNARÁ "El usuario no existe"
+
+// ................................
+
+// let carrito;
+
+// let carritoLocalStorage = JSON.parse( localStorage.getItem('carrito'));
+
+// if (carritoLocalStorage) {
+//       carrito = carritoLocalStorage;
+// } else {
+//       carrito = [];
+// }
+
+// console.log(carritoLocalStorage);
+
+// ........SIMPLIFICADO
+
+// const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
+// // LO DE ARRIBA REEMPLAZA ESTA FUNCIÓN
+// localStorage.setItem("carrito", "valor");
+
+// let carrito = [];
+
+// let carritoJSON = localStorage.getItem("carrito");
+
+// if (carritoJSON) {
+//       carrito = JSON.parse(carritoJSON);
+// }
+
+
+// ................................
+
+// ........................ OPERADOR LÓGICO NULLISH  ??    (cuando querés validar si algo es nulo o undefined)
+
+// .... FUNCIONA IGUAL QUE EL OPERADOR OR 
+
+// CUANDO EL operando1 ES = NULL / UNDEFINED  DEVUELVE EL operando2
+
+// LOS ÚNICOS VALORES QUE PUEDE TOMAR EL OPERANDO1 PARA QUE DEVUELVA EL OPERANDO2 SON NULL Y UNDEFINED
+
+// EJ
+
+// // RETORNA "Nullish"
+// console.log( null ?? "Nullish");
+
+// // RETORNA 40
+// console.log( 40 ?? "Nullish");
+
+// let a = 0;
+
+// // RETORNA "a es falso"
+// console.log( a || "a es falso");
+
+// // RETORNA EL VALOR DE a (0)
+// console.log(a ?? "a es falso");
+
+
+// // ...................... ACCESO CONDICIONAL A UN OBJETO 
+
+// const usuario = null;
+
+// console.log( usuario.nombre || "El usuario no existe" );
+// // Error: "No se pueden leer propiedade de null"
+
+
+// // EL ? DESPUÉS DE NOMBRE EVALÚA SI EVALÚA SI EL OBJETO TIENE EL ATRIBUTO NOMBRE
+
+// console.log( usuario?.nombre || "El usuario no existe" );
+// // "El usuario no existe"
+
+// ................................
+
+// const productos = [
+//       {
+//             nombre: "Arroz",
+//             precio: 230,
+//             categoria: {
+//                   nombre: "Cereal",
+//             },
+//       },
+//       {
+//             nombre: "Leche",
+//             precio: 130,
+//       },
+// ];
+
+// productos.forEach( (producto) => {
+
+//       // SI EXISTE LA CATEGORÍA LE INGRESA EL NOMBRE  SI NO LA TIENE, PONE SIN CATEGORÍA
+//       const categoria = producto.categoria?.nombre || "Producto sin categoría";
+//       console.log( categoria + ": " + producto.nombre );
+// });
+
+/////////////////////////////////////////////////////////////////
+
+// .......................... DESESTRUCTURACIÓN
+
+// SE DECLARA LA VARIABLE CON CONST O LET
+// DENTRO DE LAS LLAVES SE INGRESAN LOS NOMBRES DE LAS VARIABLES QUE SE DESEAN DECLARAR
+// LUEGO DE LAS LLAVES CON EL OPERADOR DE ASIGNACIÓN = INDICAMOS EL OBJETO (en este ej producto)
+// JS AL RECIBIR EL NOMBRE DEL PRODUCTO BUSCA CADA ATRIBUTO DEL ELEMENTO Y SI EXISTE LO ASIGNA A LA VARIABLE ADECUADA
+// EL NOMBRE DE LA VARIABLE !!!!!! TIENE QUE SER IGUAL AL NOMBRE DEL ATRIBUTO DEL OBJETO !!!!!!!
+// const producto = {
+//       nombre: "Yogurt",
+//       categoria: {
+//             nombre: "Lácteos",
+//       },
+//       precio: 50,
+//       stock: 25,
+//       vencimiento: "25/8/2022",
+// };
+
+// // // FORMA TRADICIONAL DE GUARDAR CADA ATRIBUTO EN UNA VARIABLE
+// // const nombre = producto.nombre;
+// // const categoria = producto.categoria;
+// // const precio = producto.precio;
+// // const stock = producto.stock;
+// // const vencimiento = producto.vencimiento;
+
+
+// // DESESTRUCTURACIÓN
+// // ADENTRO DE { VAN LOS NOMBRES DE LAS VARIABLES }
+// // const { nombre, categoria, precio, stock, vencimiento } = producto; 
+
+// // // JAVASCRIPT BUSCA EN EL PRODUCTO SI TIENE CADA ATRIBUTO INGRESADO
+// // // Y A ESOS ATRIBUTOS LES ASIGNA SU VALOR A CADA VARIABLE
+
+// // console.log(categoria);
+// // // RETORNA LA CATEGORÍA
+
+// // console.log(vencimiento);
+// // // RETORNA EL VENCIMIENTO
+
+
+// // DESESTRUCTURACIÓN DE SUBOBJETOS
+
+// // EL NOMBRE DE LA VARIABLE VA A SER NOMBRE
+// // A CATEGORIA LO VA A TRATAR COMO UNA CLAVE
+// const { categoria: {nombre} } = producto;
+
+// // IMPRIME EL NOMBRE DE LA CATEGORÍA
+// console.log(nombre);
+
+// // // DEVUELVE ERROR PORQUE NO EXISTE
+// // console.log(categoria);
+
+
+// // SI SE QUIERE CREAR OTRA VARIABLE MAS
+// const { categoria: {nombre, deposito} } = producto;
+
+/////////////////////////////////////////////////////////////////
+
+// .......................................... ALIAS
+
+// PARA QUE LA DESESTRUCTURACIÓN FUNCIONE TIENEN QUE COINCIDIR LOS NOMBRES DE LAS PROPIEDADES DEL OBJETO CON LOS DE LAS VARIABLES
+
+// const item = {
+//       itemID: 430,
+//       nombreDelProducto: "Berenjenas",
+//       precioDelProducto: 380,
+// };
+
+// // SELECCIONAMOS CADA ATRIBUTO Y LE ASIGNAMOS EL NOMBRE DE LA VARIABLE
+// // NOMBRE DE LAS VARIABLES  ( ID, NOMBRE, PRECIO )
+// const {
+//       itemID: id,
+//       nombreDelProducto: nombre,
+//       precioDelProducto: precio,
+// } = item;
+
+// console.log("El id es: " + id);
+// console.log("El nombre es: " + nombre);
+// console.log(precio);
+
+/////////////////////////////
+
+// HACIÉNDOLO AL REVÉS
+
+// const producto = {
+//             nombre: "Yogurt",
+//             categoria: {
+//                   nombre: "Lácteos",
+//             },
+//             precio: 50,
+//             stock: 25,
+//             vencimiento: "25/8/2022",
+//       };
+
+
+// const {
+//       nombre: nombreDelProducto,
+//       categoria: categoriaDelProducto,
+//       precio: precioDelProducto,
+//       stock: stockDelProducto,
+// } = producto;
+
+// console.log(precioDelProducto);
+
+// console.log(categoriaDelProducto);
+
+/////////////////////////////////////////////////////////////////
+
+// ....................................... DESESTRUCTURACIÓN EN PARÁMETROS
+
+// const producto = {
+//       nombre: "Yogurt",
+//       categoria: {
+//             nombre: "Lácteos",
+//       },
+//       precio: 50,
+//       stock: 25,
+//       vencimiento: "25/8/2022",
+// };
+
+// REEMPLAZARÍA ESTO
+// const desestructurar = (item) => {
+
+//       // DESESTRUCTURANDO DENTRO DEL BLOQUE
+//       const { nombre, vencimiento } = item;
+//       console.log(nombre, vencimiento);
+// }
+
+// // desestructurar(producto);
+
+// // POR ESTO
+// const desestructurar = ( { nombre, vencimiento } ) => {
+//       console.log( nombre, vencimiento );
+// };
+
+// desestructurar( producto );
+
+// // ..............................
+
+// // USO SIMILAR CON ALIAS
+
+// const producto = {
+//       nombre: "Yogurt",
+//       categoria: {
+//             nombre: "Lácteos",
+//       },
+//       precio: 50,
+//       stock: 25,
+//       vencimiento: "25/8/2022",
+// };
+// //                                se asigna el valor del atributo nombre a la variable / alias nombreDelProducto
+// function imprimirNombreDelProducto ( { nombre: nombreDelProducto} ) {
+
+//       console.log( "El nombre es: " + nombreDelProducto);
+// };
+
+// imprimirNombreDelProducto(producto);
+
+// ...................................
+
+// DESESTRUCTURACIÓN EN EVENTOS
+
+// const button = document.getElementById("button1");
+
+// button.addEventListener( "click", (e) => {
+
+//       // TARGET ES EL ELEMENTO HTML DONDE OCURRE EL EVENTO
+//       const target = e.target;
+
+//       // DEVUELVE EL ELEMENTO DONDE SUCEDE EL EVENTO
+//       // EN ESTE EJEMPLO EL BUTTON1
+//       console.log(target);
+// });
+
+// DESESTRUCTURADO               OBJETO EVENTO DESESTRUCTURADO
+// button.addEventListener( "click", ({target}) => {
+
+//       // IMPRIME EL ELEMENTO DONDE SUCEDE EL EVENTO
+//       // EN ESTE EJEMPLO EL BUTTON1
+//       console.log(target);
+// });
+
+// ...................................
+
+// DESESTRUCTURACIÓN EN ARRAYS
+
+// A DIFERENCIA DE LA DESESTRUCTURACIÓN EN OBJETOS QUE SE DESESTRUCTURA POR SU NOMRE
+
+// EN ARRAYS SE DESESTRUCTURA POSICIONALMENTE
+
+// const nombres = ["Juan", "Fernando", "Damian", "Ludmila"];
+
+// EL a HACE REFERENCIA A Juan, EL b A Fernando
+// SI HUBIESE UN c HARÍA REFERENCIA A Damian
+// const [a, b] = nombres;
+
+// DEVUELVE Fernando
+// console.log(b);
+
+// // DEVUELVE ERROR
+// console.log(c);
+
+// // PARA OMITIR POSICIONES
+// const [,, a, b] = nombres;
+
+// // DEVUELVE Ludmila
+// console.log(b);
+
+// ..............................
+
+// const array = [ "elemento 1", "elemento 2", "elemento 3" ]
+
+// const [ el1, el2, el3] = array;
+
+// console.log(el3);
+
+// // DEVUELVE ERROR
+// console.log(el4);
+
+// // SI SÓLO QUIERO TENER LOS DOS PRIMEROS
+// // ANTES HACÍA
+// const el1 = array[0];
+// const el2 = array[1];
+
+// AHORA DESESTRUCTURANDO EL ARRAY
+// const [el1, el2] = array;
+
+// ...................................
+
+// ..................... OPERADOR SPREAD
+
+// PARA DESPARRAMAR UN ARRAY O UN OBJETO
+
+// const nombres = ["Juan", "Fernando", "Damian", "Ludmila"];
+
+// DEVUELVE EL ARRAY
+// console.log(nombres);
+
+
+// SPREAD ... DEL ARRAY
+// console.log( ...nombres);
+// // DEVUELVE LA LISTA DE NOMBRES COMO SI HICIÉRAMOS
+// console.log("Juan", "Fernando", "Damian", "Ludmila");
+
+// ....................................
+
+// OTRO USO
+
+// FUNCIÓN mostrarArray QUE TOMA TODOS LOS ELEMENTOS QUE SE INGRESEN Y CREA UN ARRAY CON ELLOS
+
+// REALIZA UN SPREAD DE LOS ELEMENTOS INGRESADOS
+// Y A ESTOS LOS METE EN UN ARRAY
+// function mostrarArray (...array) {
+//       console.log(array);
+// };
+
+// mostrarArray ("elemento 1", "elemento 2", "elemento 3");
+
+
+// LO QUE HACE EL SPREAD AL APLICARSE SOBRE UN ARRAY
+// ENVÍA TODOS LOS ELEMENTOS COMO PARÁMETROS INDIVIDUALES
+
+
+// ............................................
+
+
+// SI NECESITO SABER EL MAYOR O MENOR NÚMERO DE UN ARRAY
+
+// const numeros = [ 1, -2, 33, -20, 90, 85];
+
+// // INTENTO SACAR EL MÁXIMO
+// console.log( Math.max(numeros));
+// // DEVUELVE NaN
+
+// CON EL OPERADOR SPREAD SE PUEDE SOLUCIONAR ESTO PORQUE Math.max() RECIBIRÁ CADA ELEMENTO DEL ARRAY COMO PARÁMETRO INDIVIDUAL
+
+// const numeros = [ 1, -2, 33, -20, 90, 85];
+
+// console.log( Math.max( ...numeros));
+// // DEVUELVE 90
+
+// ....................... SPREAD PARA CONCATENAR ARRAYS
+
+// const array1 = ["Producto 1", "Producto 2"];
+
+// const array2 = ["Producto 3", "Producto 4"];
+
+// const concatenacion = [ 
+
+//       // ACÁ METE TODOS LOS ELEMENTOS DEL ARRAY1
+//       ...array1,
+//       // ACÁ METE TODOS LOS ELEMENTOS DEL ARRAY2
+//       ...array2,
+// ];
+
+// console.log(concatenacion);
+
+
+// // ANTES LO HACÍAMOS CON EL MÉTODO CONCAT()
+// const concatenacionConConcat = array1.concat(array2);
+
+// console.log(concatenacionConConcat);
+
+
+// ....................... SPREAD DE OBJETOS
+
+// PARA HACER UN SPREAD DE OBJETOS SE DEBE HACER DENTRO DE UNA ESTRUCTURA QUE LO PERMITA
+
+
+// UN SPREAD APLICADO SOBRE UN OBJETO PRESENTARÍA CADA PAR DE CLAVE: VALOR SEPARADO POR COMAS
+// ESTO DENTRO DE UNA FUNCIÓN NO SERÍA ADMISIBLE
+// PERO SÍ LO ES DENTRO DE OTRO OBJETO
+
+// const producto1 = {
+//       nombreDelProducto: "Producto 1",
+//       precioDelProducto: 50,
+// };
+
+// const categoria = {
+//       categoriaDelProducto: "Categoría 1",
+// };
+
+// const deposito = {
+//       depositoDelProducto: "Depósito 1",
+// };
+
+// const productoFinal = {
+//       ...producto1,
+//       ...categoria,
+//       ...deposito,
+// };
+
+// console.log(productoFinal)
+
+// ...............................
+
+// const usuario1 = {
+//       nombre: "Juan",
+//       edad: 24,
+//       curso: "JavaScript",
+// };
+// console.log(usuario1);
+
+// const usuario2 = {
+//       ...usuario1
+// }
+// console.log(usuario2);
+
+// const usuario3 = {
+//       ...usuario1,
+//       // ACÁ PARA CAMBIAR EL CURSO Y LA EDAD PISAMOS LOS PARÁMETROS
+//       // Y JS PRIORIZA EL NUEVO VALOR DE CURSO / EDAD Y LE OTORGA ESE VALOR AL usuario3
+//       edad: 29,
+//       curso: "React JS",
+// };
+// console.log(usuario3);
+
+///////////////////////////////////////////////////////////////////////////////
+
+// EMPEZAMOS A CODEAR EN INGLES
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+// ................................ LIBRERIAS
+
+// ...... SWEETALERT
+
+// swal.fire({
+//       title: 'Cancelar reserva',
+//       text: "Estas seguro que deseas cancelarla?",
+//       icon: "error"
+// });
+
+// METEMOS ESE SWAL en un evento click de un boton
+
+// const bookingButton = document.getElementById("bookingButton");
+// bookingButton.innerText = "Boton Reserva";
+
+// const cancelButton = document.getElementById("cancelButton");
+// cancelButton.innerText = "Cancelar reserva";
+
+// // EVENTO PARA EL BOTÓN RESERVA
+// bookingButton.addEventListener( "click", () => {
+
+//       swal.fire({
+//             title: "Realizar reserva",
+//             text: "Deseas realizar la reserva?",
+//             icon: "question"
+//       });
+// });
+
+// // EVENTO PARA EL CANCELAR RESERVA
+// cancelButton.addEventListener( "click", () => {
+
+//       swal.fire({
+//             title: "Cancelar reserva",
+//             text: "Deseas cancelar la reserva?",
+//             icon: "error"
+//       });
+// });
 
 
 
